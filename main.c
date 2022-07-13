@@ -2,10 +2,10 @@
 #include <stdlib.h> // malloc,freeを使うための宣言
 #include <math.h> // sqrtを使うための宣言
 
-int myRoot(double x) // x の平方根を返す関数。x >= 0 ではないとき exit(1) とする。 
+double myRoot(double x) // x の平方根を返す関数。x >= 0 ではないとき exit(1) とする。 
 {
-  int y;
-  if( x <= 0 ){
+  double y; // int型をdouble型へ変更
+  if( x < 0 ){ // 最初から0が入るため"<"へ変更
     exit(1);
   }
   y = sqrt(x);
